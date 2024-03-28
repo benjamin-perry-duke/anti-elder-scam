@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Fraud Highlighter",
     "version": "1.0",
     "description": "Highlights text that may contain fraud.",
