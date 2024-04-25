@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "extension",
+  "description": "Silver Surfer | LLM-Based Fraud Protection",
+  "version": "0.0.1",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "contextMenus",
+    "storage",
+    "unlimitedStorage"
+  ],
+  "background": {
+    "service_worker": "scam-processor.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "minimum_chrome_version": "92",
+  "action": {
+    "default_icon": {
+      "16": "icons/elder-scam-icon.png",
+      "24": "icons/elder-scam-icon.png",
+      "32": "icons/elder-scam-icon.png"
+    },
+    "default_title": "Silver Surfer SafeGuard",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'"
+  },
+  "icons": {
+    "16": "icons/elder-scam-icon.png",
+    "48": "icons/elder-scam-icon.png",
+    "128": "icons/elder-scam-icon.png"
+  }
+}
