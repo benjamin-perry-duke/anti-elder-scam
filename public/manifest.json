@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "extension",
+  "name": "Silver Surfer",
   "description": "Silver Surfer | LLM-Based Fraud Protection",
   "version": "0.0.1",
   "permissions": [
@@ -11,7 +11,7 @@
     "unlimitedStorage"
   ],
   "background": {
-    "service_worker": "scam-processor.js",
+    "service_worker": "scam_processor.js",
     "type": "module"
   },
   "content_scripts": [
